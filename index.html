@@ -1,121 +1,186 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepagina</title>
     <link rel="stylesheet" href="style.css">
-
+    <link href="https://db.onlinewebfonts.com/c/d7e8a95865396cddca89b00080d2cba6?family=SoDo+Sans+SemiBold" rel="stylesheet">
+ 
 </head>
 <body>
+
+<!--navigatie voorbeeld/ bron: https://codepen.io/shieldsma91/pen/zLpbLX-->
+  <header>
+   <nav>  
+    <a href="index.html"><img src="images/Starbucks-logo.png" alt="Starbucks Logo"></a>
+    <div id="menuToggle">
+      <input type="checkbox">
+        <span></span>
+        <span></span>
+        <span></span>        
+          
+      <ul id="menu">
+        <li>Menu</li>
+        <li><a href="onzekoffie.html">Our Coffees</a></li>
+        <li>Bezorging</li>
+        <li>Verantwoordelijkheid</li>
+        <li>Carriere</li>
+        <li><span></span></li>
+        <li id="fas">Find a store</li>
+        <li id="NL">NL</li>
+        <li><button type="button" data-theme-toggle aria-label="Light mode">Change to light theme</button></li>
+      </ul>
+    </div>
+   </nav>
+  </header>
+
+
+  <main>
+  <!--Fotos met buttons op begin pagina -->
+    <div class="buttonimage">
+      <img src="images/background.png" alt="Starbucks logo achtergrond.">
+      <button class="btn">Bestel nu</button>
+      <button class="bta">Vind jouw dichtsbijzijnde locatie</button>
+    </div>
     
-<header>
-    <nav>
-        <ul>
-            <li>Menu</li>
-            <li>Our Coffees</li>
-            <li>Bezorging</li>
-            <li>Verantwoordelijkheid</li>
-            <li>Carriere</li>
-            <li>Find a store</li>
-            <li>NL</li>
-        </ul>
-
-    </nav>
-</header>
-
-<main>
-    <button onclick="document.location='default.asp'">Bestel nu</button>
-    <button onclick="document.location='default.asp'">Vind jou dichtsbijzijnde locatie</button>
-
-    <img src="" alt="">
-
-    <section>
+    <!--stukje tekst -->
+    <section class="tekst">
+      <img src="images/pumpkin.spice.webp" alt="Afbeelding met tekst Ga helemaal los met pumpkin spice. Op foto 2 drankjes te zien en een cake. drankje 1,
+      Pumpkin Cream Coldbrew, drankje 2 Pumpkin spice latte en een Creamy carrot cake.">
       <h2>Het is Pumpkin Spice seizoen 🍂 </h2>
-        <p>
-           Onze iconische Pumpkin Spice Latte is terug! Op ons menu vind je de warme kruiden van dit seizoen terug in een warme of ijskoude Latte, Cold Brew of Frappuccino.
-           De Pumpkin Spice blend van pompoen, gember, kaneel en enkele geheime extra's brengt je helemaal in de stemming voor dit seizoen en gaat perfect samen met onze nieuwe Creamy Carrot Cake, ideaal voor deze koudere dagen. Ontdek de nieuwe smaken in onze winkels 🍰
-           Beperkte oplage en exclusief verkrijgbaar bij Starbucks.
-           Bestel nu rechtstreeks aan je deur via Uber Eats of Thuisbezorgd. </p>
+      <p>
+        Onze iconische Pumpkin Spice Latte is terug! Op ons menu vind je de warme kruiden van dit seizoen terug in een warme of ijskoude Latte, Cold Brew of Frappuccino.
+      </p>
 
+      <p>
+        De Pumpkin Spice blend van pompoen, gember, kaneel en enkele geheime extra's brengt je helemaal in de stemming voor dit seizoen en gaat perfect samen met onze nieuwe Creamy Carrot Cake, ideaal voor deze koudere dagen. Ontdek de nieuwe smaken in onze winkels 🍰
+      </p>
+
+      <p>
+        Beperkte oplage en exclusief verkrijgbaar bij Starbucks.
+        Bestel nu rechtstreeks aan je deur via Uber Eats of Thuisbezorgd. 
+      </p>
     </section>
+    
+    <!--2e stukje tekst -->
+    <section class="tekst">
+      <p>Jouw favorieten bezorgd aan huis! </p>
 
-    <section>
-        <p>Jouw favorieten bezorgd aan huis! </p>
+      <img src="images/giving.cup.webp" alt="Vrouw die een starbucks beker ontvangt.">
 
-        <img src="" alt="">
+      <h2>Starbucks® Delivers</h2>
+      <p>
+          Mis dit voorjaar nooit meer een drankje met Starbucks® Bezorgd. 
+      </p>
 
-        <h2>Starbucks® Delivers</h2>
-
-        <p>
-            Mis dit voorjaar nooit meer een drankje met Starbucks® Bezorgd.
-
-            Geniet van al je favorieten aan en knus op je bank terwijl je je favoriete serie bingewatcht.
-            
-            We bezorgen tot aan je deur, zodat je kunt genieten van je Iced Latte of Caramel Frappuccino in de comfort van je eigen huis.
-        </p>
-
-        <button onclick="document.location='default.asp'">Bestel nu</button>
-    </section>
-
-    <article>
-        <h2>Embracing sustainability</h2>
-
-        <p>
-            Vanaf 1 juli 2023 brengen we kosten in rekening voor alle wegwerp items gemaakt van plastic. Go Green 💚 
-        </p>
-        <button onclick="document.location='default.asp'">Ontdek meer</button>
-    </article>
-
-    <article>
-        <h2>Starbucks Verhalen</h2>
-
-        <p>
-            Blijf op de hoogte van onze laatste Starbucks verhalen en nieuws.
-        </p>
-        <button onclick="document.location='default.asp'">Ontdek meer</button>
-    </article>
-
-    <article>
-        <h2>Over ons</h2>
-
-        <p>
-            Ontdek meer over ons bedrijf en geschiedenis.
-        </p>
-        <button onclick="document.location='default.asp'">Ontdek meer</button>
-    </article>
-
-    <article>
-        <h2>Starbucks® Bezorgd</h2>
-
-        <p>
-            Genieten van je favoriete Starbucks® drankjes vanuit het comfort van je huis is dichterbij dan je zou denken. Het is de koffie die je kent en waar je van houdt, in je favoriete mok. Kijk of bezorging bij jou in de buurt mogelijk is. Start je bestelling om je Starbucks® favorieten te laten bezorgen via Uber Eats en Thuisbezorgd.
-        </p>
-        <button onclick="document.location='default.asp'">Ontdek meer</button>
-    </article>
-    <footer>
-        <nav>
-            <ul>Over ons</ul>
-            <ul>Onze koffies</ul>
-            <ul>Starbucks verhalen en nieuws</ul>
-            <ul>Starbucks® Ready to drink</ul>
-            <ul>Zuivelalternatieven</ul>
-        </nav>
-
-        <nav>
-            <ul>Werken bij Starbucks</ul>
-            <ul>Contact</ul>
-        </nav>
+      <p>
+        Geniet van al je favorieten aan en knus op je bank terwijl je je favoriete serie bingewatcht.
+      </p> 
         
-        <nav>
-            <ul>Verantwoordelijkheid</ul>
-            <ul>Embracing sustainability</ul>
-        </nav>
-    </footer>
+      <p>
+        We bezorgen tot aan je deur, zodat je kunt genieten van je Iced Latte of Caramel Frappuccino in de comfort van je eigen huis.
+      </p>
 
-</main>
+      <button onclick="document.location='default.asp'">Bestel nu</button>
+    </section>
+
+    <!--aantal articles onder elkaar in polaroid style voorbeeld polaroids: https://www.w3schools.com/css/css3_images.asp-->
+
+    <article class="polaroid">
+      <img src="images/Starbucks-Sustainability-Commitment-Environment.jpg.webp" alt="Lucht foto van starbucks logo gemaakt van bomen en rivieren">
+      <div class="container">
+        <h2>Embracing sustainability</h2>
+        <p>Vanaf 1 juli 2023 brengen we kosten in rekening voor alle wegwerp items gemaakt van plastic. Go Green 💚 </p>
+        <button onclick="document.location='default.asp'">Ontdek meer</button>
+      </div>
+    </article>
+
+    <article class="polaroid">
+      <img src="images/Starbucks.Bugibba.webp" alt="Foto van starbucks cafe">
+      <div class="container">
+        <h2>Starbucks verhalen</h2>
+        <p>
+          Blijf op de hoogte van onze laatste Starbucks verhalen en nieuws.
+        </p>
+        <button onclick="document.location='default.asp'">Ontdek meer</button>
+      </div>
+    </article>
+    
+    <article class="polaroid">
+      <img src="images/About-Us-Card-Image-C06-RESIZED.jpg.webp" alt="Zwart witte foto van starbucks cafe.">
+      <div class="container">
+        <h2>Over ons</h2>
+        <p>
+          Ontdek meer over ons bedrijf en geschiedenis.
+        </p>
+        <button onclick="document.location='default.asp'">Ontdek meer</button>
+      </div>
+    </article>
 
 
+    <article class="polaroid">
+      <img src="images/Starbucks-Delivers-Hero-C01-RESIZED.jpg.webp" alt="Drie starbucks drankjes">
+      <div class="container">
+        <h2>Starbucks® Bezorgd</h2>
+        <p>
+          Genieten van je favoriete Starbucks® drankjes vanuit het comfort van je huis is dichterbij dan je zou denken. Het is de koffie die je kent en waar je van houdt, in je favoriete mok. Kijk of bezorging bij jou in de buurt mogelijk is. Start je bestelling om je Starbucks® favorieten te laten bezorgen via Uber Eats en Thuisbezorgd.
+        </p>
+        <button onclick="document.location='default.asp'">Ontdek meer</button>
+      </div>
+    </article>
+    
+    
+   
+  <footer>
+    <!--Met details drop down menus -->
+    <details>
+      <summary>Over ons</summary>
+      <ul class="foot">
+        <li>Over ons</li>
+        <li>Onze koffies</li>
+        <li>Starbucks verhalen en nieuws</li>
+        <li>Starbucks® Ready to drink</li>
+        <li>Zuivelalternatieven</li>
+      </ul>
+    </details>
+   
+    <details>
+      <summary>Contact</summary>
+      <ul class="foot">
+        <li>Werken bij Starbucks</li>
+        <li>Contact</li>
+      </ul>
+    </details>
+   
+       
+    <details>
+      <summary>Sociale Impact</summary>
+      <ul class="foot">
+        <li>Verantwoordelijkheid</li>
+        <li>Embracing sustainability</li>
+      </ul>
+    </details>
+
+    <span class="line"></span>
+
+    <!--social media handles -->
+    <div class="socials">
+      <img src="images/facebook-icon-black-png-large.png" alt="Facebook logo">
+      <img src="images/5ecec6ef73e4440004f09e75.png" alt="Instagram logo">
+      <img src="images/tiktok-black-round1663.jpg" alt="Tiktok Logo">
+    </div>
+
+    <div class="footeronder">
+      <p>Privacy Policy</p>
+      <p>Terms of Use</p>
+      <p>Cookie Policy</p>
+    </div>
+       
+  </footer>
+ </main>
+
+ <script src="script.js"></script>
 
 </body>
 </html>

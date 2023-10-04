@@ -1,9 +1,722 @@
-header {background-color: white;}
-main {background-color: #f2f2f2}
-footer {background-color: white;}
-article {background-color: white;}
+
+@import url(https://db.onlinewebfonts.com/c/d7e8a95865396cddca89b00080d2cba6?family=SoDo+Sans+SemiBold); 
+@font-face {
+    font-family: "SoDo Sans SemiBold";
+    src: url("https://db.onlinewebfonts.com/t/d7e8a95865396cddca89b00080d2cba6.eot");
+    src: url("https://db.onlinewebfonts.com/t/d7e8a95865396cddca89b00080d2cba6.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/d7e8a95865396cddca89b00080d2cba6.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/d7e8a95865396cddca89b00080d2cba6.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/d7e8a95865396cddca89b00080d2cba6.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/d7e8a95865396cddca89b00080d2cba6.svg#SoDo Sans SemiBold")format("svg");
+}
+
+
+@font-face {
+    font-family: 'SoDo Sans';
+    src: local('SoDo Sans Light'), local('SoDo-Sans-Light'),
+        url('SoDoSans-Light.woff2') format('woff2'),
+        url('SoDoSans-Light.woff') format('woff'),
+        url('SoDoSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+
+
+
+
+/*algemene dingen voor de body*/
+body {
+  overflow-x: hidden;
+  margin: 0%;
+}
+
+/*dark mode*/
+[data-theme="light"] {
+  --color-bg: #ffffff;
+  --color-fg: #000000;
+  --color: #555555;
+  --box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  --span: #000000;
+  --background: #f2f2f2;
+}
+ 
+[data-theme="dark"] {
+  --color-bg: #000000;
+  --color-fg: #ffffff;
+  --color: #ffffff;
+  --box-shadow: 0 1px 2px 0 darkgreen, 0 6px 20px 0 darkgreen;
+  --span: #ffffff;
+  --background: black;
+}
+
+ 
+
+
+/*navigatie hamburger menu*/
+
+li {
+  text-decoration: none;
+  color: var(--color-fg);
+  opacity:1;
+  font-family: "SoDo Sans";
+  font-size: 1.3em;
+}
+
+
+a{
+  text-decoration: none;
+  color: var(--color-fg);
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+  
+  
+nav {
+  background-color: var(--color-bg);
+  height: 67px;
+}
+
+/*nav logo*/
+
+nav img{
+  width: 11%;
+  top: 2.7%;
+  left: 4%;
+  position: absolute;
+}
+
+/*navigatie*/
+  
+  
+#menuToggle {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 25px;
+  left: 85%;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+  
+#menuToggle input{
+  display: flex;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+  
+#menuToggle span
+{
+  display: flex;
+  width: 29px;
+  height: 2px;
+  margin-bottom: 5px;
+  position: relative;
+  background: var(--span);
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 5px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+}
+  
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+  
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+  
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-3px, -1px);
+  background: var(--color-fg);
+}
+  
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+  
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+  
+#menu
+{
+    position: absolute;
+    width: 64%;
+    height: fit-content;
+    margin: -10% 0 0 -65%;
+    padding: 8%;
+    padding-top: 125px;
+    background-color: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    box-shadow: 30px 50px 100px black;
+}
+
+#menu span{
+  width: 100%;
+  background-color: lightgray;
+  height: 2.5px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+ 
+
+#menu li
+{
+  padding: 8%;
+  transition-delay: 2s;
+}
+
+#fas {
+  font-family: "SoDo Sans Semibold";
+  padding-bottom: 5%;
+  padding-left: 5%;
+  color: var(--color-fg);
+  font-size: 1em;
+}
+
+#NL {
+  font-family: "SoDo Sans Semibold";
+  padding-bottom: 5%;
+  padding-left: 5%;
+  color: darkgreen;
+  font-size: 1.2em;
+}
+  
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+
+/*foto op eerste scherm*/
+
+.buttonimage {
+  position:relative;
+  width: 100%;
+  margin: 0%;
+}
+
+.buttonimage img {
+  width: 100%;
+  height: auto;
+  z-index: -2;
+}
+  
+/* buttons op de foto's op eerste schermen*/
+.buttonimage .btn {
+  position: absolute;
+  top: 80%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.buttonimage .bta {
+  position: absolute;
+  top: 90%;
+  margin-left: 40%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  white-space: nowrap;
+}
+
+
+/*main achtergrond*/
+
+main {
+  background-color: var(--background);
+}
+
+
+/*tekst defaults*/
 
 p {
-    color: grey;
-    
+    color: var(--color);
+    font-family: "SoDo Sans"; 
+    font-size: 0.9em;     
+}
+
+h2 {
+  color: var(--color-fg);
+    font-family: "SoDo Sans SemiBold";  
+    font-size: 1.7em; 
+}
+
+h3 {
+  color: var(--color-fg);
+  font-family: "Sodo Sans";
+  font-size: 1.2em;
+}
+
+h4 {
+  color: var(--color-fg);
+  font-family: "Sodo Sans Semibold";
+  font-size: 0.95em;
+}
+
+
+/*button default*/
+
+button {
+    border: 2px solid green;
+    color:green;
+    background-color:transparent;
+    font-family:"SoDo Sans Semibold";
+    padding: 7px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 17px;
+}
+
+
+/*articles op homepagina */
+.polaroid {
+    width: 95%;
+    margin-left: 2.5%;
+    background-color: var(--color-bg);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 25px;
+
+  }
+
+.polaroid img{
+  width: 100%;
+}
+  
+.container {
+  text-align: left;
+  padding: 5%;
+}
+
+.container h2{
+  padding-left: 0%;
+  font-size: 1.3em;
+  margin-bottom: 2%;
+}
+
+.container p{
+  margin-bottom: 5%;
+}
+
+
+/*tekst stukjes*/
+  
+.tekst p,h2{
+  width: 90%;
+  padding-left: 5%;
+}
+
+.tekst img{
+  width: 100%;
+}
+
+.tekst p{
+  margin-bottom: 6%;
+}
+
+.tekst h2{
+  margin-bottom: 8%;
+  margin-top: 8%;
+}
+
+.tekst button{
+  margin-left: 5%;
+  margin-top: 9%;
+  margin-bottom: 12%;
+}
+
+/*nog meer tekst*/
+.tekst2{
+  margin-bottom: 15%;
+}
+
+.tekst2 p,h2{
+  width: 90%;
+  padding-left: 5%;
+}
+
+.tekst2 h2{
+  margin-top: 15%;
+  margin-bottom: 8%;
+}
+
+.tekst2 p{
+  font-size: 1.2em;
+  font-family: "Sodo Sans";
+  color:var(--color);
+  margin-bottom: 4%;
+}
+
+
+/*koffiezakken met tekst op onze koffie pagina*/
+.koffiezak{
+  width: 95%;
+}
+  
+.koffiezak h2{
+  padding-left: 5%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+
+.koffiezak button{
+  margin-left: 5%;
+  margin-bottom: 7%;
+}
+
+.koffiezak img{
+  width: 95%;
+  margin-left: 5%;
+  position:relative;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*class for styling*/
+.sknop{
+  display: flex;
+  flex-direction: row;
+}
+
+/*toevoegen aan favo voorbeeld bron: https://www.youtube.com/watch?v=Ok9JnHadY_U*/
+
+.parent {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 8%;
+}
+
+label {
+  width: 160px;
+  height: 16px;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select:none;
+  user-select: none;
+  border-radius: 17px;
+  -webkit-box-shadow:rgba(149, 157, 165, 0.2) 0px 8px 24px ;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  color: green; 
+  border: 2px solid green;
+  font-family: "Sodo Sans Semibold";
+  font-size: 0.8em;
+  margin-bottom: 12%;
+}
+
+input {
+  display: none;
+}      
+
+input:checked + label svg {
+  fill: green;
+  stroke: green;
+  -webkit-animation:heartButton 1s; 
+        animation: heartButton 1s;
+}
+
+/*animeren van de hartjes knop*/
+
+@keyframes heartButton {
+  0% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+  }
+
+  25% {
+          -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  }
+
+  50% {
+          -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  75% {
+          -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  }
+
+  100% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+  }
+}
+
+input + label .action {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+}
+
+input + label .action span {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+
+input + label .action span.option-1 {
+  -webkit-transform: translate(0px,0%);
+     -ms-transform: translate(0px,0%);
+       transform: translate(0px,0%);
+opacity: 1;         
+}
+
+
+input + label .action span.option-2 {
+  -webkit-transform: translate(0px,100%);
+     -ms-transform: translate(0px,100%);
+       transform: translate(0px,100%);
+opacity: 0;         
+}
+
+input:checked + label .action span.option-1 {
+  -webkit-transform: translate(0px,-100%);
+    -ms-transform: translate(0px,-100%);
+    transform: translate(0px,-100%);
+    opacity: 0;
+}
+
+input:checked + label .action span.option-2 {
+  -webkit-transform: translate(0px,100%);
+    -ms-transform: translate(0px,100%);
+    transform: translate(0px,100%);
+    opacity: 0;
+}
+
+input:checked + label .action span.option-2 {
+  -webkit-transform: translate(0px,0%);
+  -ms-transform: translate(0px,0%);
+    transform: translate(0px,0%);
+opacity: 1;    
+}
+
+
+
+
+ /*tekeningetjes met text*/
+
+ .tekeningtekst {
+  display: flex;
+ }
+
+ .tekeningtekst img{
+  height: fit-content;
+  padding: 5%;
+  width:100%;
+  animation: poor 8s infinite;
+ }
+
+/*animatie van de koffie*/
+
+ @keyframes poor {
+  50% {transform: rotate(-40deg);}
+}
+
+ .tekeningtekst p{
+  padding-bottom: 8%;
+  padding-right: 5%;
+ }
+
+ .tekeningtekst h3{
+   padding-bottom: 5%;
+ }
+
+ 
+
+/*lijntjes op de pagina*/
+.line {
+    display: block;
+    height: 1.5px;
+    width: 90%;
+    border-radius: 10px;
+    background: lightgrey;
+    margin-bottom: 8%;
+    margin-left: 5%;
+
+}
+
+/*footer*/
+
+footer {background-color: var(--color-bg);}
+
+/*drop downs footer*/
+/*https://codepen.io/STKNG/pen/GbVogZ  gebruikt voor hulp met stylen. Wel veel aangepast aan code*/
+
+details {
+	position: relative;
+	width: 300px;
+	margin-right: 1rem;
+}
+
+details[open] {
+	z-index: 1;
+}
+
+summary {
+  width: 100%;
+	padding: 1rem;
+	cursor: pointer;
+	list-style: none;
+  font-size: 1.5em;
+  font-family: "Sodo Sans";
+  color: var(--color-fg);
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
+details[open] summary:before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100vh;
+	background: transparent;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+summary:after {
+  float: right;
+	content: '';
+	display: inline-block;
+	width: .5rem;
+	height: .5rem;
+	border-bottom: 2px solid currentColor;
+	border-left: 2px solid currentColor;
+	border-bottom-left-radius: 2px;
+	transform: rotate(-45deg) translate(0%, 0%);
+	transform-origin: center center;
+	transition: transform ease-in-out 100ms
+  
+}
+
+summary:focus {
+	outline: none;
+}
+
+details[open] summary:after {
+	transform: rotate(-225deg) translate(0%, 0%);
+}
+
+footer ul {
+	width: 100%;
+	background: var(--color-bg);
+	position: absolute;
+	top: calc(100% + .5rem);
+	left: 0;
+	padding: 1rem;
+	margin: 0;
+	box-sizing: border-box;
+	overflow-y: auto;
+  width: 150%;
+}
+
+.foot li {
+	margin: 0;
+	padding: 1rem 0;
+  font-family: "Sodo Sans Semibold";
+  font-size: 1em;
+  color: var(--color-fg);
+
+}
+
+.foot li:first-child {
+	padding-top: 2%;
+}
+
+.foot li:last-child {
+	padding-bottom: 0;
+	border-bottom: none;
+}
+
+/*info onder drop down*/
+
+.footeronder p{
+  font-family: "SoDo Sans Semibold";
+  padding-bottom: 8%;
+  padding-left: 5%;
+  color: var(--color-fg);
+}
+
+/*social media handles*/
+.socials{
+  display:flex;
+}
+
+.socials img{
+  width: 9%;
+  height: fit-content;
+  margin-left: 5%;
+  margin-bottom: 10%;
+}
+
+footer{
+  padding-bottom: 30%;
+}
+
+/*scroll animatie bron: https://codepen.io/andreassikjaer/pen/jOYwvXX*/
+
+@keyframes enter-animation {
+	0% {
+		transform: translateY(100px);
+    opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+    opacity: 1;
+	}
+}
+@media (prefers-reduced-motion: no-preference) {
+  .image-animation {
+    animation: enter-animation 1.5s 1;
+  }
 }

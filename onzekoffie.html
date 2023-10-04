@@ -1,135 +1,365 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Onze koffie</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-        
-   <header>
-     <nav>
-        <ul>
-            <li>Menu</li>
-            <li>Our Coffees</li>
-            <li>Bezorging</li>
-            <li>Verantwoordelijkheid</li>
-            <li>Carriere</li>
-            <li>Find a store</li>
-            <li>NL</li>
+  
+  <!--navigatie voorbeeld/bron: https://codepen.io/shieldsma91/pen/zLpbLX-->
+  <header>
+    <nav>  
+      <a href="index.html"><img src="images/Starbucks-logo.png" alt="Starbucks Logo"></a>
+      <div id="menuToggle">
+        <input type="checkbox">
+          <span></span>
+          <span></span>
+          <span></span>        
+        <ul id="menu">
+          <li>Menu</li>
+          <li>Our Coffees</li>
+          <li>Bezorging</li>
+          <li>Verantwoordelijkheid</li>
+          <li>Carriere</li>
+          <li><span></span></li>
+          <li id="fas">Find a store</li>
+          <li id="NL">NL</li>
+          <li><button type="button" data-theme-toggle aria-label="Light mode">Change to light theme</button></li>
         </ul>
+      </div>
+    </nav>
+    
 
-     </nav>
-   </header>
+  </header>
+  
+  <main>
+    <!--foto met knoppen er op -->  
+    <div class="buttonimage">
+      <img src="images/koffie.home.page.png" alt="Koffie die uit machine komt achtergrond foto.">
+      <button class="btn">Bestel nu</button>
+      <button class="bta">Vind jou dichtsbijzijnde locatie</button>
+    </div>
 
-   <main>
-    <h1>Onze koffie</h1>
-    <button onclick="document.location='default.asp'">Bestel nu</button>
-    <button onclick="document.location='default.asp'">Vind jou dichtsbijzijnde locatie</button>
-
-    <h2>Onze koffie</h2>
-    <p>
+    <!--tekst stukje -->
+    <section class="tekst2">
+      <h2>Onze koffie</h2>
+      <p>
         Bij Starbucks gaat het sinds het begin al om de kwaliteit van de koffie. Onze passie voor koffie wordt alleen overtroffen door onze liefde om het te delen.
+      </p>
+
+      <p>
         Of je nu thuis geniet van een momentje voor jezelf of samen met gasten een nieuwe zak koffiebonen opentrekt het is altijd een ervaring, een explosie van aroma en een gevoel van thuiskomen. 
+      </p>
+
+      <p>
         Met zoveel Starbucks koffiebonen om uit te kiezen is het moeilijk om jouw persoonlijke perfecte kop te vinden. We helpen je graag opweg.
-    </p>
+      </p>
 
-    <h2>Het Starbucks Roast™ Spectrum</h2>
-    <p>
+      <h2>Het Starbucks Roast™ Spectrum</h2>
+      <p>
         Onze koffies zijn ingedeeld op basis van drie brandprofielen: Blond, Medium en Dark, zodat je de smaak en intensiteit kunt vinden die bij je past.
-        Blonde Roasts Starbucks® Blonde Roast-koffie is het minst lang gebrand en heeft daardoor een zachte en lichtzoete smaak. Het is een benaderbare en smaakvolle kop koffie met lichte hints van de branding. 
+      </p>
+
+      <p>
+        Blonde Roasts Starbucks® Blonde Roast-koffie is het minst lang gebrand en heeft daardoor een zachte en lichtzoete smaak. Het is een benaderbare en smaakvolle kop koffie met lichte hints van de branding.
+      </p> 
+
+      <p>
         Medium Roasts Smooth en gebalanceerd, onze medium roasts zijn perfect voor elke koffiemomentje.
+      </p>
+
+      <p>
         Dark Roasts Deze koffies zijn krachtiger door het lange brandingsproces. De robuuste smaken komen naar voren door de intense branding en produceren een koffie met rijke en volle smaken.
+      </p>
+    </section>
+    
+    <!--koffie zakken met optie om favoriet toe te voegen 
+    favorieten toevoegen bron/voorbeeld: https://www.youtube.com/watch?v=Ok9JnHadY_U-->
 
-    </p>
-
-    <article>
-        <img src="" alt="">
-        <h2>Starbucks Blonde Roast</h2>
+    <article class="koffiezak">
+      <img src="images/BlondeRoast.jpg.webp" alt="Starbuck Blonde Roasts koffie zak.">
+      <h2>Starbucks Blonde Roast</h2>
+      <div class="sknop">
         <button onclick="document.location='default.asp'">Blonde Roasts</button>
+        <div class="parent">
+          <div class="child">
+            <input type="checkbox" checked="checked" id="favorite" name="favorite-checkbox" value="favorite-button">
+            <label for="favorite" class="container">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"> 
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+      
+              <span class="action">
+                <span class="option-1">Add to Favorites</span>
+                <span class="option-2">Added to Favorites</span>
+              </span>
+            </label>
+          </div>
+        </div>
+      </div>  
     </article>
 
-    <article>
-        <img src="" alt="">
-        <h2>Colombia Nariño</h2>
+    <article class="koffiezak">
+      <img src="images/Coffee.png.webp" alt="Starbucks Colombia Nariño koffie zak.">
+      <h2>Colombia Nariño</h2>
+      <div class="sknop">
         <button onclick="document.location='default.asp'">Medium Roasts</button>
+        <div class="parent">
+          <div class="child">
+            <input type="checkbox" checked="checked"  name="favorite-checkbox" value="favorite-button">
+            <label for="favorite" class="container">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"> 
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+      
+              <span class="action">
+                <span class="option-1">Add to Favorites</span>
+                <span class="option-2">Added to Favorites</span>
+              </span>
+            </label>
+          </div>
+        </div>
+      </div>
     </article>
 
-    <article>
-        <img src="" alt="">
-        <h2>Pike Place</h2>
+    <article class="koffiezak">
+      <img src="images/Pike-Place-Coffee-Bag-C04-RESIZED.jpg.webp" alt="Starbucks Pike Place Coffee zak.">
+      <h2>Pike Place</h2>
+      <div class="sknop">
         <button onclick="document.location='default.asp'">Medium Roasts</button>
+        <div class="parent">
+          <div class="child">
+            <input type="checkbox" checked="checked" name="favorite-checkbox" value="favorite-button">
+            <label for="favorite" class="container">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"> 
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+      
+              <span class="action">
+                <span class="option-1">Add to Favorites</span>
+                <span class="option-2">Added to Favorites</span>
+              </span>
+            </label>
+          </div>
+        </div>
+      </div>
     </article>
 
-    <h2>Hoe maak je de perfecte kop koffie?</h2>
-    <p>
+    <!--weer een stukje tekst -->
+
+    <section class="tekst">
+      <h2>Hoe maak je de perfecte kop koffie?</h2>
+      <p>
         Wellicht heb je er nog niet aan gedacht, maar wist je dat de verschillende brouwmethoden binnen Starbucks allemaal andere smaken in de koffie naar voren brengen. Laat onze kennis je helpen om de volle potentie te ontgrendelen van jouw favoriete koffie - voor de perfecte kop, elke keer opnieuw.
-    </p>
+      </p>
+    </section>
 
+    <!--sections met tekst en koffie tekeningen -->
 
+    <section class="tekeningtekst">
+      <img src="images/Our_Coffee_C09_Press.png.webp" alt="Tekening van Koffie pers">
 
-    <h2>Coffee press</h2>
-    <p>
-        Brewing with a coffee press retains the precious natural oils that paper filters absorb, and extracts the coffee’s full flavour while giving it a consistency that’s thick and rich.
+      <div>
+        <h3>Coffee press</h3>
+        <p>
+           Brewing with a coffee press retains the precious natural oils that paper filters absorb, and extracts the coffee’s full flavour while giving it a consistency that’s thick and rich.
+        </p>
 
-        1. Grind and measure
-        Remember, coffee is like produce. Buy it often in small quantities to enjoy it at the peak of freshness.
-        TIP: Remember, coffee is like produce. Buy it often in small quantities to enjoy it at the peak of freshness.
+        <h4>1. Grind and measure</h4>
+        <p>
+           Remember, coffee is like produce. Buy it often in small quantities to enjoy it at the peak of freshness.
+           TIP: Remember, coffee is like produce. Buy it often in small quantities to enjoy it at the peak of freshness.
+        </p>
 
-        2. Add hot water
-        To give your coffee the best possible flavour, use filtered or bottled water.
-        TIP: To give your coffee the best possible flavour, use filtered or bottled water.
+        <h4> 2. Add hot water</h4>
+        <p>
+           To give your coffee the best possible flavour, use filtered or bottled water.
+           TIP: To give your coffee the best possible flavour, use filtered or bottled water.
+        </p>
 
-        3. Place plunger and brew
-        Put the plunger back on the press without pushing it down, and let the coffee brew for 4 minutes.
+        <h4> 3. Place plunger and brew</h4>
+           
+        <p> 
+          Put the plunger back on the press without pushing it down, and let the coffee brew for 4 minutes.
+        </p>
 
-        4. Press and pour
-        Gently push down the plunger until it reaches the bottom of the press, and enjoy.
-    </p>
+        <h4>4. Press and pour</h4>
+        <p> 
+          Gently push down the plunger until it reaches the bottom of the press, and enjoy. 
+        </p>
+      </div>
+    </section>
 
-    <h2>Pour-over</h2>
-    <p>      
-       Pour-over is a beautifully simple and accessible way to brew a single cup of coffee with clean, fully developed flavour and body.
+    <span class="line"></span>
 
-       1. Measure and boil
-       Measure as much water as you’re going to use to brew, plus a little extra for rinsing the filter, and bring it to a boil.
+    <section class="tekeningtekst">
+      <img src="images/OurCoffeeCone.webp" alt="Tekening van koffie kegel.">
+      <div>
+         <h3>Pour-over</h3>
 
-       2. Pre-moisten filter
-       Briefly rinse the paper filter with hot water, and discard the rinse water. This will give your coffee the purest flavour possible.
+         <p>      
+            Pour-over is a beautifully simple and accessible way to brew a single cup of coffee with clean, fully developed flavour and body.
+         </p>
 
-       3. Measure and grind
-       Next, measure your coffee. For pour-over, use coffee ground for a paper cone. It’s a relatively fine grind that looks like granulated sugar. Measure 2 tablespoons of coffee per 6 ounces of water.
+         <h4>1. Measure and boil</h4>  
 
-       4. Pour and pause
-       Use hot water that’s just off the boil and fill the cone halfway to saturate the grounds. Pause for 10 seconds and let the coffee bloom. This allows the coffee to hydrate evenly and begin to develop flavour.
+         <p>
+            Measure as much water as you’re going to use to brew, plus a little extra for rinsing the filter, and bring it to a boil.
+         </p>
+     
+         <h4>2. Pre-moisten filter</h4>   
+         <p>
+            Briefly rinse the paper filter with hot water, and discard the rinse water. This will give your coffee the purest flavour possible.
+         </p>  
 
-       5. Complete the pour and enjoy
-       To make your pour-over more consistent, use a timer. It should take about 3 minutes to make a cup.
-       TIP: To make your pour-over more consistent, use a timer. It should take about 3 minutes to make a cup.
-    </p>
+         <h4>3. Measure and grind</h4>
+         <p>
+            Next, measure your coffee. For pour-over, use coffee ground for a paper cone. It’s a relatively fine grind that looks like granulated sugar. Measure 2 tablespoons of coffee per 6 ounces of water.
+         </p>
+
+         <h4>4. Pour and pause</h4>
+         <p>
+            Use hot water that’s just off the boil and fill the cone halfway to saturate the grounds. Pause for 10 seconds and let the coffee bloom. This allows the coffee to hydrate evenly and begin to develop flavour.
+         </p>
+
+         <h4>5. Complete the pour and enjoy</h4>
+         <p>
+            To make your pour-over more consistent, use a timer. It should take about 3 minutes to make a cup.
+            TIP: To make your pour-over more consistent, use a timer. It should take about 3 minutes to make a cup.
+         </p>
+      </div>
+    </section>
+
+    <span class="line"></span>
+
+    <section class="tekeningtekst">
+      <img src="images/Our_Coffee_C09_Iced.png.webp" alt="Tekening van ijs pour over machine.">
+      <div>
+        <h3>Iced Pour-Over</h3>
+        <p>
+          Iced pour-over is a simple and approachable way to make rich, full-flavoured iced coffee one pitcher at a time. 
+        </p>
+
+        <h4>1. Pre-moisten filter</h4>
+        <p>
+          Briefly rinse the paper filter with hot water, and discard the rinse water. This will give your coffee the purest flavour possible.
+        </p>
+
+        <h4>2. Choose the right grind</h4>
+        <p>
+          For pour-over, use coffee ground for a paper cone. It’s a relatively fine grind that looks like granulated sugar.
+        </p>
+
+        <h4>3. Measure</h4>
+        <p>
+          Iced pour-over is brewed at double strength and diluted with ice, so measure 4 tablespoons of coffee for every 6 ounces of hot water. 
+        </p>
+
+        <h4>4. Pour and pause</h4>
+        <p>
+          Use hot water that’s just off the boil and fill the cone halfway to saturate the grounds. Pause for 10 seconds and let the coffee bloom. This lets it hydrate evenly and begin to develop flavour.
+        </p>
+
+        <h4>5. Complete the pour</h4>
+        <p>
+          Slowly add the rest of the water, pouring in small, steady circles to cover all the grounds.
+        </p>
+
+        <h4>6. Add ice</h4>
+        <p>
+          African coffees are popular for iced pour-over because of their superb juicy body, and tangy, sparkling citrus notes.
+          TIP: African coffees are popular for iced pour-over because of their superb juicy body, and tangy, sparkling citrus notes.
+        </p>    
+      </div>
+    </section>
+
+    <span class="line"></span>
+
+    <section class="tekeningtekst">
+      <img src="images/Our_Coffee_C09_Press.png.webp" alt="Koffie maker tekening">
+      <div>
+        <h3>  Coffee Brewer </h3>
+        <p>
+          Drip coffee is a convenient way to make great coffee. With the right grind and pure water, you can brew a fantastic cup of coffee in a coffee brewer.
+        </p>
+
+        <h4>1. Choose the right grind</h4>
+        <p>
+          For a flat bottom filter, use a medium grind that resembles sea salt. Cone filters use a finer grind that resembles granulated sugar.
+        </p>
+
+        <h4>2. Measure</h4>
+        <p>
+          Use 2 tablespoons of freshly ground coffee for every 6 ounces of water.
+        </p>
+
+        <h4>3. Brew and enjoy</h4>
+        <p>
+          TIP: Brewed coffee is always best fresh, so make as much as you’ll enjoy in a sitting. Reheating coffee can dull the flavour.
+        </p>
+      </div>
+    </section>
+
+    <span class="line"></span>
  
-   </main>
-    
-   <footer>
-    <nav>
-        <ul>Over ons</ul>
-        <ul>Onze koffies</ul>
-        <ul>Starbucks verhalen en nieuws</ul>
-        <ul>Starbucks® Ready to drink</ul>
-        <ul>Zuivelalternatieven</ul>
-    </nav>
+  </main>
 
-    <nav>
-        <ul>Werken bij Starbucks</ul>
-        <ul>Contact</ul>
-    </nav>
-    
-    <nav>
-        <ul>Verantwoordelijkheid</ul>
-        <ul>Embracing sustainability</ul>
-    </nav>
-</footer>
-    
-</body>
+  <footer>
+    <!--drop downs door middel van details -->
+    <div class="footerlinks">
+      <details>
+         <summary>Over ons</summary>
+          <ul class="foot">
+            <li>Over ons</li>
+            <li>Onze koffies</li>
+            <li>Starbucks verhalen en nieuws</li>
+            <li>Starbucks® Ready to drink</li>
+            <li>Zuivelalternatieven</li>
+          </ul>
+      </details>
+ 
+      <details>
+         <summary>Contact</summary>
+          <ul class="foot">
+            <li>Werken bij Starbucks</li>
+            <li>Contact</li>
+          </ul>
+      </details>
+ 
+     
+      <details>
+        <summary>Contact</summary>
+        <ul class="foot">
+          <li>Verantwoordelijkheid</li>
+          <li>Embracing sustainability</li>
+        </ul>
+      </details>
+    </div>
+
+      <span class="line"></span>
+
+      <!--socials -->
+
+      <div class="socials">
+        <img src="images/facebook-icon-black-png-large.png" alt="Facebook logo">
+        <img src="images/5ecec6ef73e4440004f09e75.png" alt="Instagram logo">
+        <img src="images/tiktok-black-round1663.jpg" alt="Tiktok Logo">
+      </div>
+
+      <!--extra links die nu p zijn -->
+
+      <div class="footeronder">
+        <p>Privacy Policy</p>
+        <p>Terms of Use</p>
+        <p>Cookie Policy</p>
+      </div>
+     
+  </footer>
+
+  <script src="script.js"></script>  
+
+  </body>
 </html>
