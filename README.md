@@ -64,8 +64,26 @@ Ik heb deze week nog gewerkt aan weer een nieuwe navigatie maken omdat het toch 
 
 bronnen:
 
+light dark mode:
+https://dev.to/whitep4nth3r/the-best-lightdark-mode-theme-toggle-in-javascript-368f
 
+favoriet toevoegen:
+https://www.youtube.com/watch?v=Ok9JnHadY_U
 
+scroll animatie:
+https://codepen.io/andreassikjaer/pen/jOYwvXX
+
+drop downs:
+https://codepen.io/STKNG/pen/GbVogZ
+
+muziek:
+https://www.w3schools.com/graphics/game_sound.asp//
+
+navigatie:
+https://codepen.io/shieldsma91/pen/zLpbLX
+
+Polaroids:
+https://www.w3schools.com/css/css3_images.asp
 
 
 
